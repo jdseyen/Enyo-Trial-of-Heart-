@@ -1,10 +1,10 @@
-# ░ Enyo: Trial of the Heart ░ 
+# Enyo: Trial of the Heart .✦ ݁˖
 
 > An interactive storytelling game exploring how failure can support emotional reflection and personal growth.
 
 ![Enyo: Trial of the Heart - Cover Art](Enyo%20Trial%20of%20Heart%20Art%20Cover.PNG)
 
-## 🎮 About the Game
+## ✦ About the Game ๋࣭ ⭑
 
 **Enyo: Trial of Heart** is a cozy 2D interactive storytelling game about family, perseverance, self-discovery, and learning to understand failure.
 
@@ -17,17 +17,17 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ## ✨ Key Features ✨
 
-* 📖 **Interactive storytelling** with narrative choices and branching experiences
-* 🌱 **Character-driven narrative** focused on emotional growth and self-discovery
-* 💭 **Emotional mood system** that reflects Enyo's experiences throughout the journey
-* 🎭 **Narrative trials** designed around confronting and accepting failure
-* 🎨 **Hand-drawn visual style** with a cozy, storybook-inspired aesthetic
-* 🏡 **Fantasy setting** inspired by Lanna and Northern Thai visual elements
-* 🚫 **No traditional game-over system**, allowing failure to become part of the player's journey
+* **Interactive storytelling** with narrative choices and branching experiences
+* **Character-driven narrative** focused on emotional growth and self-discovery
+*  **Emotional mood system** that reflects Enyo's experiences throughout the journey
+* **Narrative trials** designed around confronting and accepting failure
+* **Hand-drawn visual style** with a cozy, storybook-inspired aesthetic
+* **Fantasy setting** inspired by Lanna and Northern Thai visual elements
+* **No traditional game-over system**, allowing failure to become part of the player's journey
 
 ---
 
-## 📖 Story
+## ✦ Story ๋࣭ ⭑ 
 
 Enyo is a young elf who has dedicated herself to helping her sick mother run their small wooden game shop.
 
@@ -43,7 +43,7 @@ Her journey gradually becomes about more than simply obtaining the gem. It becom
 
 ---
 
-## 🎨 Art & Visual Direction
+## ✦ Art & Visual Direction ๋࣭ ⭑
 
 The game uses a soft, hand-drawn visual style inspired by illustrated storybooks and cozy fantasy games.
 
@@ -60,7 +60,7 @@ The visual style is designed to support the game's gentle atmosphere while helpi
 
 ---
 
-## 🕹️ Gameplay & Design
+## ✦ Gameplay & Design ๋࣭ ⭑
 
 The gameplay combines interactive storytelling with light role-playing and puzzle elements.
 
@@ -72,7 +72,7 @@ This design approach supports the game's central idea that **failure can be expe
 
 ---
 
-## 🔬 Research Context
+## ✦ Research Context ๋࣭ ⭑
 
 **Enyo: Trial of the Heart** was developed as a practice-based research project exploring the lived experience of failure within interactive storytelling.
 
@@ -87,7 +87,7 @@ The project draws from phenomenological approaches to understanding lived experi
 
 ---
 
-## 🛠️ Development
+## ✦ Development ๋࣭ ⭑
 
 ### Engine & Programming
 
@@ -102,9 +102,8 @@ The project draws from phenomenological approaches to understanding lived experi
 
 ### Art & Design
 
-* Adobe Photoshop
-* Krita
-* Infinite Painter
+* Procreate
+* Canva
 * Hand-drawn digital illustration
 * 2D animation and visual asset development
 
@@ -114,7 +113,7 @@ The project was primarily developed for **PC**, with the game concept designed w
 
 ---
 
-## 👩‍💻 My Role
+## ✦ My Role ๋࣭ ⭑
 
 My work on **Enyo: Trial of Heart** covers both creative and technical development.
 
@@ -124,7 +123,7 @@ My contributions include:
 * Interactive storytelling design
 * Visual direction and asset development
 * Unity development
-* UI implementation
+* UI implementation and design 
 * Story page and dialogue systems
 * Scene transitions and loading systems
 * Player movement and interaction systems
@@ -137,19 +136,19 @@ The project allowed me to combine **game design, visual development, storytellin
 
 ---
 
-## 📸 Screenshots
+## ✦ Screenshots ๋࣭ ⭑
 
 *Screenshots and gameplay footage will be added here.*
 
 ---
 
-## 🎥 Gameplay
+## ✦ Gameplay ๋࣭ ⭑
 
 *Gameplay footage / demonstration video will be added here.*
 
 ---
 
-## 📚 Development & Research
+## ✦ Development & Research ๋࣭ ⭑
 
 This repository documents the development of **Enyo: Trial of Heart**, including its creative direction, technical implementation, and research-informed design process.
 
@@ -157,7 +156,7 @@ The project explores how interactive media can create meaningful experiences aro
 
 ---
 
-## 📌 Project Status
+## ✦ Project Status ๋࣭ ⭑
 
 **Status:** [In Development]
 
@@ -165,7 +164,7 @@ The project is currently being developed and refined as part of an academic game
 
 ---
 
-## 🙏 Credits
+## ✦ Credits ๋࣭ ⭑
 
 Created by **Jade Seyen** and future collaborators.
 
@@ -173,7 +172,7 @@ Additional contributors, assets, music, sound effects, fonts, and third-party re
 
 ---
 
-## © Copyright
+## © Copyright ๋࣭ ⭑
 
 © 2026 Jade Seyen. All rights reserved.
 

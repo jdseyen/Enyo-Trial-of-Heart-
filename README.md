@@ -11,7 +11,7 @@ Players follow **Enyo**, a young elf who lives in a small elf village and helps 
 Throughout her journey, Enyo encounters a series of challenging trials that encourage her to confront failure, reflect on her experiences, and gradually develop confidence in herself.
 
 Rather than treating failure as a punishment or a traditional game-over state, the game explores failure as a meaningful part of personal growth.
-
+![Enyo: Trial of the Heart - Cover Art](Enyo%20Trial%20of%20Heart%20Art%20Cover.PNG)
 ---
 
 ## ✨ Key Features ✨

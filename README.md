@@ -4,7 +4,7 @@
 
 ## 🎮 About the Game
 
-**Enyo: Trial of the Heart** is a cozy 2D interactive storytelling game about family, perseverance, self-discovery, and learning to understand failure.
+**Enyo: Trial of Heart** is a cozy 2D interactive storytelling game about family, perseverance, self-discovery, and learning to understand failure.
 
 Players follow **Enyo**, a young elf who lives in a small elf village and helps her sick mother run their wooden game shop. When a mysterious creature offers Enyo the opportunity to seek the legendary **Cintamani Gem**, a gem said to grant one wish, she sets out on a journey to obtain it and cure her mother.
 

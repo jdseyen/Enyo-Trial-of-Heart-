@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ChoicePanel
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - SolidObjects
+  - Interactable
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: TopDown_Ground
+    uniqueID: 2470729849
+    locked: 0
+  - name: TopDown_Ground2
+    uniqueID: 4164296697
+    locked: 0
+  - name: TopDown_River
+    uniqueID: 372367793
+    locked: 0
+  - name: TopDown_WalkinFront
+    uniqueID: 145077953
+    locked: 0
+  - name: TopDown_Collision
+    uniqueID: 3163313245
+    locked: 0
+  - name: TopDown_Decor
+    uniqueID: 3927632537
+    locked: 0
+  - name: Platform_TreeBackground
+    uniqueID: 2753435691
+    locked: 0
+  - name: TopDown_Player
+    uniqueID: 1481776905
+    locked: 0
+  - name: TopDown_WalkBehind
+    uniqueID: 4001832609
+    locked: 0
+  - name: TopDown_OutsideDecor
+    uniqueID: 2330758889
+    locked: 0
+  - name: Platform_SkyBackground
+    uniqueID: 1167739559
+    locked: 0
+  - name: Platform_Ground
+    uniqueID: 875986649
+    locked: 0
+  - name: Platform_InteractiveObjects
+    uniqueID: 2286716607
+    locked: 0
+  - name: Platform_Player
+    uniqueID: 2454703635
+    locked: 0
+  - name: Platform_GrassWalkbehind
+    uniqueID: 1710472731
+    locked: 0

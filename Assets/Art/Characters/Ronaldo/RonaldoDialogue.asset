@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdad746e5f54de94f8a01c2f2dca32c4, type: 3}
+  m_Name: RonaldoDialogue
+  m_EditorClassIdentifier: 
+  npcName: Ronaldo
+  npcPortrait: {fileID: 21300000, guid: d03408041f921de42a888c3b02ea7ba2, type: 3}
+  dialogueLines:
+  - Ohoho! Enyo! My favorite hard worker!
+  - I heard the wonderful news from your mother! Congratulations!
+  - Here, take this bread for your journey
+  - You're gonna need it! Ohoho!
+  autoProgressLines: 01010101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.04
+  voiceSound: {fileID: 8300000, guid: 75a52d966edb7d94b943e99c58e779fc, type: 3}
+  voiceVolume: 0.2
+  voicePitch: 0.5

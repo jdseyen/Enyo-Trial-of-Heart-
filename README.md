@@ -50,7 +50,7 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ---
 
-## ✦ Gameplay ๋࣭ ⭑
+## ✦ Gameplay Video ๋࣭ ⭑
 
 <div align="center">
 

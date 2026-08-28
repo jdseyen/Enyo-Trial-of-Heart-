@@ -52,10 +52,7 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ## ✦ Gameplay ๋࣭ ⭑
 
-<!-- Add a GIF or embed a YouTube video here. Example: -->
-<!-- [![Gameplay Demo](path/to/thumbnail.png)](https://youtu.be/your-video-id) -->
-
-*Gameplay footage coming soon.*
+[![Enyo: Trial of the Heart - Gameplay](https://img.youtube.com/vi/ApaGYoLkBHU/0.jpg)](https://youtu.be/ApaGYoLkBHU)
 
 ---
 

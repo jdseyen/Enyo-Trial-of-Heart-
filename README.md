@@ -41,12 +41,15 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ## ✦ Screenshots ๋࣭ ⭑
 
-<!-- Add your screenshots here. Example format: -->
+<div align="center">
 
-<!-- ![Screenshot 1](path/to/screenshot1.png) -->
-<!-- ![Screenshot 2](path/to/screenshot2.png) -->
+<!-- Replace the lines below with your screenshot filenames -->
 
-*Screenshots coming soon.*
+![Screenshot 1](Assets/Screenshots/screenshot1.png)
+![Screenshot 2](Assets/Screenshots/screenshot2.png)
+![Screenshot 3](Assets/Screenshots/screenshot3.png)
+
+</div>
 
 ---
 

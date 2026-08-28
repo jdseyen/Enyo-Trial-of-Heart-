@@ -45,6 +45,7 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ![Screenshot 1](Assets/Screenshots/Screenshot%202026-05-13%20134632.png)
 ![Screenshot 2](Assets/Screenshots/Screenshot%202026-05-13%20132347.png)
+![Screenshot 3](Assets/Screenshots/Screenshot%202026-05-13%20135827.png)
 
 </div>
 

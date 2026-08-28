@@ -1,8 +1,25 @@
 # Enyo: Trial of the Heart .✦ ݁˖
 
+![Unity](https://img.shields.io/badge/Unity-2D-black)
+![C#](https://img.shields.io/badge/C%23-10-blue)
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![Platform](https://img.shields.io/badge/Platform-PC-green)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)
+
 > An interactive storytelling game exploring how failure can support emotional reflection and personal growth.
 
 ![Enyo: Trial of the Heart - Cover Art](Enyo%20Trial%20of%20Heart%20Art%20Cover.PNG)
+
+| | |
+|---|---|
+| **Engine** | Unity (2D) |
+| **Language** | C# |
+| **Status** | In Development |
+| **Platform** | PC |
+| **Role** | Solo Developer |
+| **Research** | Practice-based (PhD) |
+
+---
 
 ## ✦ About the Game ๋࣭ ⭑
 
@@ -13,13 +30,14 @@ Players follow **Enyo**, a young elf who lives in a small elf village and helps 
 Throughout her journey, Enyo encounters a series of challenging trials that encourage her to confront failure, reflect on her experiences, and gradually develop confidence in herself.
 
 Rather than treating failure as a punishment or a traditional game-over state, the game explores failure as a meaningful part of personal growth.
+
 ---
 
 ## ✨ Key Features ✨
 
 * **Interactive storytelling** with narrative choices and branching experiences
 * **Character-driven narrative** focused on emotional growth and self-discovery
-*  **Emotional mood system** that reflects Enyo's experiences throughout the journey
+* **Emotional mood system** that reflects Enyo's experiences throughout the journey
 * **Narrative trials** designed around confronting and accepting failure
 * **Hand-drawn visual style** with a cozy, storybook-inspired aesthetic
 * **Fantasy setting** inspired by Lanna and Northern Thai visual elements
@@ -27,7 +45,27 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ---
 
-## ✦ Story ๋࣭ ⭑ 
+## ✦ Screenshots ๋࣭ ⭑
+
+<!-- Add your screenshots here. Example format: -->
+
+<!-- ![Screenshot 1](path/to/screenshot1.png) -->
+<!-- ![Screenshot 2](path/to/screenshot2.png) -->
+
+*Screenshots coming soon.*
+
+---
+
+## ✦ Gameplay ๋࣭ ⭑
+
+<!-- Add a GIF or embed a YouTube video here. Example: -->
+<!-- [![Gameplay Demo](path/to/thumbnail.png)](https://youtu.be/your-video-id) -->
+
+*Gameplay footage coming soon.*
+
+---
+
+## ✦ Story ๋࣭ ⭑
 
 Enyo is a young elf who has dedicated herself to helping her sick mother run their small wooden game shop.
 
@@ -69,6 +107,19 @@ Players progress through Enyo's story by exploring environments, interacting wit
 The trials are designed to represent different experiences of challenge and failure. Instead of restarting the entire experience when something goes wrong, the player's failures become part of the narrative and emotional progression.
 
 This design approach supports the game's central idea that **failure can be experienced, reflected upon, and learned from rather than simply treated as something to avoid.**
+
+---
+
+## ✦ Technical Highlights ๋࣭ ⭑
+
+Key systems and technical implementation:
+
+* **Save/Load System** — Persistent game state management across sessions
+* **Dialogue System** — Branching narrative with player choice integration
+* **Scene Management** — Smooth transitions between areas with loading states
+* **Emotional Mood System** — Dynamic system tracking and reflecting Enyo's emotional state
+* **Player Movement** — 2D movement with environmental interaction
+* **UI System** — Story pages, menus, and HUD built with Unity UI
 
 ---
 
@@ -123,7 +174,7 @@ My contributions include:
 * Interactive storytelling design
 * Visual direction and asset development
 * Unity development
-* UI implementation and design 
+* UI implementation and design
 * Story page and dialogue systems
 * Scene transitions and loading systems
 * Player movement and interaction systems
@@ -136,29 +187,18 @@ The project allowed me to combine **game design, visual development, storytellin
 
 ---
 
-## ✦ Screenshots ๋࣭ ⭑
+## ✦ Lessons Learned ๋࣭ ⭑
 
-*Screenshots and gameplay footage will be added here.*
-
----
-
-## ✦ Gameplay ๋࣭ ⭑
-
-*Gameplay footage / demonstration video will be added here.*
-
----
-
-## ✦ Development & Research ๋࣭ ⭑
-
-This repository documents the development of **Enyo: Trial of Heart**, including its creative direction, technical implementation, and research-informed design process.
-
-The project explores how interactive media can create meaningful experiences around failure, reflection, and personal growth.
+* Designing failure as a mechanic required rethinking traditional game-over states and player expectations
+* Balancing narrative depth with gameplay clarity is an ongoing iterative process
+* Practice-based research strengthens design decisions through reflection and documentation
+* Hand-drawn art pipelines benefit from early planning around Unity's sprite import settings
 
 ---
 
 ## ✦ Project Status ๋࣭ ⭑
 
-**Status:** [In Development]
+**Status:** In Development
 
 The project is currently being developed and refined as part of an academic game development project.
 

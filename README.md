@@ -43,11 +43,7 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 <div align="center">
 
-<!-- Replace the lines below with your screenshot filenames -->
-
-![Screenshot 1](Assets/Screenshots/screenshot1.png)
-![Screenshot 2](Assets/Screenshots/screenshot2.png)
-![Screenshot 3](Assets/Screenshots/screenshot3.png)
+![Screenshot 1](Assets/Screenshots/Screenshot%202026-05-13%20134632.png)
 
 </div>
 

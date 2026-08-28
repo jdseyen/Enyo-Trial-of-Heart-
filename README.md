@@ -1,11 +1,5 @@
 # Enyo: Trial of the Heart .✦ ݁˖
 
-![Unity](https://img.shields.io/badge/Unity-2D-black)
-![C#](https://img.shields.io/badge/C%23-10-blue)
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
-![Platform](https://img.shields.io/badge/Platform-PC-green)
-![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)
-
 > An interactive storytelling game exploring how failure can support emotional reflection and personal growth.
 
 ![Enyo: Trial of the Heart - Cover Art](Enyo%20Trial%20of%20Heart%20Art%20Cover.PNG)

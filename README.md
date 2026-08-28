@@ -17,7 +17,7 @@
 | **Status** | In Development |
 | **Platform** | PC |
 | **Role** | Solo Developer |
-| **Research** | Practice-based (PhD) |
+| **Research** | Undergraduate Final Year Project |
 
 ---
 
@@ -125,7 +125,7 @@ Key systems and technical implementation:
 
 ## ✦ Research Context ๋࣭ ⭑
 
-**Enyo: Trial of the Heart** was developed as a practice-based research project exploring the lived experience of failure within interactive storytelling.
+**Enyo: Trial of the Heart** was developed as an undergraduate final year project exploring the lived experience of failure within interactive storytelling.
 
 The project investigates:
 
@@ -200,7 +200,7 @@ The project allowed me to combine **game design, visual development, storytellin
 
 **Status:** In Development
 
-The project is currently being developed and refined as part of an academic game development project.
+The project is currently being developed and refined as part of an undergraduate final year project.
 
 ---
 

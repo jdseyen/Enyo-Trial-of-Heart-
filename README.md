@@ -33,7 +33,7 @@ Rather than treating failure as a punishment or a traditional game-over state, t
 
 ---
 
-## ✨ Key Features ✨
+## Key Features 
 
 * **Interactive storytelling** with narrative choices and branching experiences
 * **Character-driven narrative** focused on emotional growth and self-discovery

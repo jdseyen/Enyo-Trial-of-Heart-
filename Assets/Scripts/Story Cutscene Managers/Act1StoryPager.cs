@@ -93,15 +93,27 @@ public class Act1StoryPager : MonoBehaviour
 
     IEnumerator FinishAllTexts(TypewriterText[] texts)
     {
-        foreach (TypewriterText text in texts)
+        bool allComplete = false;
+
+        while (!allComplete)
         {
-            if (!text.gameObject.activeSelf)
+            allComplete = true;
+
+            foreach (TypewriterText text in texts)
             {
-                text.gameObject.SetActive(true);
-                yield return null;
+                if (!text.IsComplete)
+                {
+                    allComplete = false;
+
+                    if (!text.gameObject.activeSelf)
+                    {
+                        text.gameObject.SetActive(true);
+                    }
+
+                    text.FinishTyping();
+                }
             }
 
-            text.FinishTyping();
             yield return null;
         }
     }

@@ -22,28 +22,23 @@ public class Act1StoryPager : MonoBehaviour
     {
         currentPage = 0;
 
-        // Get the Image component from FadeOverlay
         if (fadeOverlay != null)
         {
             fadeImage = fadeOverlay.GetComponent<Image>();
 
             if (fadeImage != null)
             {
-                // Make sure the fade overlay starts invisible
                 Color color = fadeImage.color;
                 color.a = 0f;
                 fadeImage.color = color;
             }
             else
             {
-                Debug.LogWarning(
-                    "Fade Overlay does not have an Image component."
-                );
+                Debug.LogWarning("Fade Overlay does not have an Image component.");
             }
         }
 
         ShowPage(currentPage);
-
         UpdateBackButton();
     }
 
@@ -58,84 +53,57 @@ public class Act1StoryPager : MonoBehaviour
 
         Debug.Log("NEXT CLICKED | currentPage = " + currentPage);
 
-        // Get ALL TypewriterText components on the current page,
-        // including inactive ones.
         TypewriterText[] texts =
             pages[currentPage]
             .GetComponentsInChildren<TypewriterText>(true);
 
-        // --------------------------------------------------------
-        // STEP 1:
-        // Find the currently active text that is still typing.
-        // --------------------------------------------------------
-
-        foreach (TypewriterText text in texts)
-        {
-            if (text.gameObject.activeSelf && text.IsTyping)
-            {
-                Debug.Log(
-                    "Speeding up / finishing text: "
-                    + text.gameObject.name
-                );
-
-                // Finish ONLY the current text.
-                text.FinishTyping();
-
-                // Do not move to the next page yet.
-                return;
-            }
-        }
-
-        // --------------------------------------------------------
-        // STEP 2:
-        // Check if ALL texts on this page are complete.
-        // --------------------------------------------------------
-
-        bool allTextsComplete = true;
+        bool anyTextUnfinished = false;
 
         foreach (TypewriterText text in texts)
         {
             if (!text.IsComplete)
             {
-                allTextsComplete = false;
+                anyTextUnfinished = true;
                 break;
             }
         }
 
-        // If there is still another text in the chain,
-        // don't move to the next page yet.
-        if (!allTextsComplete)
+        if (anyTextUnfinished)
         {
-            Debug.Log("More text remains on this page.");
+            Debug.Log("Finishing ALL text on current page.");
+            StartCoroutine(FinishAllTexts(texts));
             return;
         }
 
-        // --------------------------------------------------------
-        // STEP 3:
-        // ALL TEXT IS COMPLETE.
-        // Now use the EXISTING fade/page system.
-        // --------------------------------------------------------
+        Debug.Log("All text finished. Moving to next page.");
 
-        Debug.Log(
-            "All text finished. Moving to next page."
-        );
-
-        // Last page
         if (currentPage >= pages.Length - 1)
         {
-            StartCoroutine(
-                FadeAndLoadScene("Village Map Scene")
-            );
-
+            StartCoroutine(FadeAndLoadScene("Village Map Scene"));
             return;
         }
 
-        // Next page
         currentPage++;
+        StartCoroutine(FadeAndSwitchPage(currentPage));
+    }
 
-        StartCoroutine(
-            FadeAndSwitchPage(currentPage)
-        );
+    // ============================================================
+    // FINISH ALL TEXTS (handles chained texts)
+    // ============================================================
+
+    IEnumerator FinishAllTexts(TypewriterText[] texts)
+    {
+        foreach (TypewriterText text in texts)
+        {
+            if (!text.gameObject.activeSelf)
+            {
+                text.gameObject.SetActive(true);
+                yield return null;
+            }
+
+            text.FinishTyping();
+            yield return null;
+        }
     }
 
     // ============================================================
@@ -147,18 +115,13 @@ public class Act1StoryPager : MonoBehaviour
         if (isTransitioning)
             return;
 
-        Debug.Log(
-            "BACK CLICKED | currentPage = " + currentPage
-        );
+        Debug.Log("BACK CLICKED | currentPage = " + currentPage);
 
         if (currentPage <= 0)
             return;
 
         currentPage--;
-
-        StartCoroutine(
-            FadeAndSwitchPage(currentPage)
-        );
+        StartCoroutine(FadeAndSwitchPage(currentPage));
     }
 
     // ============================================================
@@ -194,16 +157,9 @@ public class Act1StoryPager : MonoBehaviour
     IEnumerator FadeAndSwitchPage(int newPage)
     {
         isTransitioning = true;
-
-        // Fade to black
         yield return Fade(0f, 1f);
-
-        // Change page while screen is black
         ShowPage(newPage);
-
-        // Fade back in
         yield return Fade(1f, 0f);
-
         isTransitioning = false;
     }
 
@@ -214,11 +170,7 @@ public class Act1StoryPager : MonoBehaviour
     IEnumerator FadeAndLoadScene(string sceneName)
     {
         isTransitioning = true;
-
-        // Fade to black
         yield return Fade(0f, 1f);
-
-        // Load next scene
         SceneManager.LoadScene(sceneName);
     }
 
@@ -230,29 +182,18 @@ public class Act1StoryPager : MonoBehaviour
     {
         if (fadeImage == null)
         {
-            Debug.LogWarning(
-                "Fade Image is missing!"
-            );
-
+            Debug.LogWarning("Fade Image is missing!");
             yield break;
         }
 
         float timer = 0f;
-
         Color color = fadeImage.color;
 
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
-
-            color.a = Mathf.Lerp(
-                from,
-                to,
-                timer / fadeDuration
-            );
-
+            color.a = Mathf.Lerp(from, to, timer / fadeDuration);
             fadeImage.color = color;
-
             yield return null;
         }
 

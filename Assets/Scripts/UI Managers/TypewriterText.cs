@@ -57,12 +57,17 @@ public class TypewriterText : MonoBehaviour
 
     public void FinishTyping()
     {
-        if (!IsTyping)
+        if (IsComplete)
             return;
+
+        if (textComponent == null)
+        {
+            textComponent = GetComponent<TextMeshProUGUI>();
+            fullText = textComponent.text;
+        }
 
         StopAllCoroutines();
 
-        // Instantly finish THIS text
         textComponent.text = fullText;
 
         CompleteText();

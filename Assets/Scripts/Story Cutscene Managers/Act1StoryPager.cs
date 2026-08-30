@@ -71,7 +71,12 @@ public class Act1StoryPager : MonoBehaviour
         if (anyTextUnfinished)
         {
             Debug.Log("Finishing ALL text on current page.");
-            StartCoroutine(FinishAllTexts(texts));
+
+            foreach (TypewriterText text in texts)
+            {
+                text.FinishTyping();
+            }
+
             return;
         }
 
@@ -85,48 +90,6 @@ public class Act1StoryPager : MonoBehaviour
 
         currentPage++;
         StartCoroutine(FadeAndSwitchPage(currentPage));
-    }
-
-    // ============================================================
-    // FINISH ALL TEXTS (handles chained texts)
-    // ============================================================
-
-    IEnumerator FinishAllTexts(TypewriterText[] texts)
-    {
-        foreach (TypewriterText text in texts)
-        {
-            if (!text.gameObject.activeSelf)
-            {
-                text.gameObject.SetActive(true);
-                yield return null;
-            }
-
-            text.FinishTyping();
-            yield return null;
-
-            TypewriterText current = text;
-
-            while (current.nextText != null)
-            {
-                GameObject nextObj = current.nextText;
-
-                if (!nextObj.activeSelf)
-                {
-                    nextObj.SetActive(true);
-                    yield return null;
-                }
-
-                TypewriterText nextTextComp = nextObj.GetComponent<TypewriterText>();
-
-                if (nextTextComp != null && !nextTextComp.IsComplete)
-                {
-                    nextTextComp.FinishTyping();
-                    yield return null;
-                }
-
-                current = nextTextComp;
-            }
-        }
     }
 
     // ============================================================

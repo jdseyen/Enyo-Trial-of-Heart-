@@ -25,57 +25,70 @@ public class InstructionPager : MonoBehaviour
         }
     }
 
+    // ============================================================
+    // NEXT BUTTON
+    // ============================================================
+
     public void NextPage()
     {
-        Debug.Log("NEXT CLICKED | currentPage = " + currentPage);
+        Debug.Log(
+            "NEXT CLICKED | currentPage = "
+            + currentPage
+        );
 
         // Get ALL TypewriterText components
         // on the current page, including inactive ones.
         TypewriterText[] texts =
-            pages[currentPage].GetComponentsInChildren<TypewriterText>(true);
+            pages[currentPage]
+            .GetComponentsInChildren<TypewriterText>(true);
 
-        // ------------------------------------------------
-        // FIND THE CURRENT TEXT THAT IS STILL TYPING
-        // ------------------------------------------------
+        // ========================================================
+        // CHECK IF ANY TEXT IS STILL UNFINISHED
+        // ========================================================
 
-        foreach (TypewriterText text in texts)
-        {
-            // Only control the text that is currently active
-            if (text.gameObject.activeSelf && text.IsTyping)
-            {
-                Debug.Log("Finishing text: " + text.gameObject.name);
-
-                text.FinishTyping();
-
-                // STOP HERE.
-                // One click = finish ONE text.
-                return;
-            }
-        }
-
-        // ------------------------------------------------
-        // CHECK IF THERE ARE STILL MORE TEXTS TO SHOW
-        // ------------------------------------------------
+        bool anyTextUnfinished = false;
 
         foreach (TypewriterText text in texts)
         {
-            // If this text has not been completed yet,
-            // it means it is the next text in the chain.
             if (!text.IsComplete)
             {
-                Debug.Log("More text remains: " + text.gameObject.name);
-
-                return;
+                anyTextUnfinished = true;
+                break;
             }
         }
 
-        // ------------------------------------------------
-        // ALL TEXTS ON THIS PAGE ARE COMPLETE
-        // NOW GO TO THE NEXT PAGE
-        // ------------------------------------------------
+        // ========================================================
+        // IF ANY TEXT IS UNFINISHED:
+        // FINISH ALL TEXT AT ONCE
+        // ========================================================
 
-        Debug.Log("All text finished. Moving to next page.");
+        if (anyTextUnfinished)
+        {
+            Debug.Log(
+                "Finishing ALL text on current page."
+            );
 
+            foreach (TypewriterText text in texts)
+            {
+                text.FinishTyping();
+            }
+
+            // Stop here.
+            // The player must click Next again
+            // to move to the next page.
+            return;
+        }
+
+        // ========================================================
+        // ALL TEXT IS ALREADY COMPLETE
+        // MOVE TO NEXT PAGE
+        // ========================================================
+
+        Debug.Log(
+            "All text finished. Moving to next page."
+        );
+
+        // Last page ¡ú load Act 1 Story
         if (currentPage >= pages.Length - 1)
         {
             StartCoroutine(
@@ -85,10 +98,15 @@ public class InstructionPager : MonoBehaviour
             return;
         }
 
+        // Move to next page
         currentPage++;
 
         ShowPage(currentPage);
     }
+
+    // ============================================================
+    // SHOW PAGE
+    // ============================================================
 
     void ShowPage(int index)
     {
@@ -97,6 +115,10 @@ public class InstructionPager : MonoBehaviour
             pages[i].SetActive(i == index);
         }
     }
+
+    // ============================================================
+    // FADE MUSIC
+    // ============================================================
 
     IEnumerator FadeMusic(float from, float to)
     {
@@ -116,7 +138,7 @@ public class InstructionPager : MonoBehaviour
                     );
             }
 
-            yield return null;
+            yield return null; 
         }
 
         if (instructionMusic != null)
@@ -124,6 +146,10 @@ public class InstructionPager : MonoBehaviour
             instructionMusic.volume = to;
         }
     }
+
+    // ============================================================
+    // FADE OUT + LOAD SCENE
+    // ============================================================
 
     IEnumerator FadeOutAndLoadScene(string sceneName)
     {

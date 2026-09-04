@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "unity-mcp": {
+      "type": "local",
+      "command": ["uvx", "--from", "mcpforunityserver", "mcp-for-unity", "--transport", "stdio"],
+      "enabled": true,
+      "timeout": 15000
+    }
+  }
+}

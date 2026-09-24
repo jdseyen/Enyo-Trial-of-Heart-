@@ -92,7 +92,7 @@ public class Act1StoryPager : MonoBehaviour
 
         if (currentPage >= pages.Length - 1)
         {
-            StartCoroutine(FadeAndLoadScene("Village Map Scene"));
+            StartCoroutine(FadeAndLoadScene("02_Act2_Story"));
             return;
         }
 

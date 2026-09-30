@@ -6,14 +6,13 @@ public class TypewriterText : MonoBehaviour
 {
     public float typingSpeed = 0.09f;
 
-    // KEEP THIS!
-    // Assign the next TextMeshPro object in the Inspector.
+    //used to assign the next TMP object in the inspector. 
     public GameObject nextText;
 
     private TextMeshProUGUI textComponent;
-    private string fullText;
+    private string fullText; 
 
-    public bool IsTyping { get; private set; }
+    public bool IsTyping { get; private set; } 
     public bool IsComplete { get; private set; }
 
     void Awake()
@@ -23,7 +22,7 @@ public class TypewriterText : MonoBehaviour
         fullText = textComponent.text;
         textComponent.text = "";
 
-        IsComplete = false;
+        IsComplete = false; 
     }
 
     void OnEnable()
@@ -32,15 +31,17 @@ public class TypewriterText : MonoBehaviour
 
         textComponent.text = "";
         IsTyping = true;
-        IsComplete = false;
+        IsComplete = false; 
 
-        // Hide the next text until this text is finished
+        //Hide the next text until  this text is finished 
+
         if (nextText != null)
         {
             nextText.SetActive(false);
         }
 
         StartCoroutine(TypeText());
+
     }
 
     IEnumerator TypeText()
@@ -49,10 +50,29 @@ public class TypewriterText : MonoBehaviour
         {
             textComponent.text += letter;
 
-            yield return new WaitForSeconds(typingSpeed);
+            yield return new WaitForSeconds(typingSpeed); 
         }
 
-        CompleteText();
+        CompleteText(); 
+    }
+    // Used by DialogueManager to start typing new dialogue
+    public void SetText(string newText)
+    {
+        StopAllCoroutines();
+
+        fullText = newText;
+        textComponent.text = "";
+
+        IsTyping = true;
+        IsComplete = false;
+
+        // Hide next text if one is assigned
+        if (nextText != null)
+        {
+            nextText.SetActive(false);
+        }
+
+        StartCoroutine(TypeText());
     }
 
     public void FinishTyping()

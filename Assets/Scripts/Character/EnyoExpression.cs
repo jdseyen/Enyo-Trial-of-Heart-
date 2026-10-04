@@ -35,15 +35,15 @@ public class EnyoExpression : MonoBehaviour
                 smiling.SetActive(true);
                 break;
 
-            case EnyoExpressionType.Sad1:
+            case EnyoExpressionType.Sad:
                 sad1.SetActive(true);
                 break;
 
-            case EnyoExpressionType.Sad2:
+            case EnyoExpressionType.Worried:
                 sad2.SetActive(true);
                 break;
 
-            case EnyoExpressionType.Sad3:
+            case EnyoExpressionType.Upset:
                 sad3.SetActive(true);
                 break;
         }

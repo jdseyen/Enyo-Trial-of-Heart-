@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour
     // All characters in this scene
     public CharacterActor[] characters;
 
+    // Background manager for changing VN backgrounds
+    public BackgroundManager backgroundManager;
+
     // Dialogue lines shown in the Unity Inspector
     public DialogueLine[] dialogueLines;
 
@@ -37,6 +40,33 @@ public class DialogueManager : MonoBehaviour
 
         // Set expressions for all characters on this line
         SetCharacterExpressions(line);
+
+        // Change the background if needed
+        ChangeBackground(line);
+    }
+
+    private void ChangeBackground(DialogueLine line)
+    {
+        if (backgroundManager == null)
+        {
+            Debug.LogWarning("BackgroundManager is not assigned!");
+            return;
+        }
+
+        switch (line.background)
+        {
+            case BackgroundType.Shop:
+                backgroundManager.ChangeToShop();
+                break;
+
+            case BackgroundType.Food:
+                backgroundManager.ChangeToFood();
+                break;
+
+            case BackgroundType.None:
+                // Do nothing
+                break;
+        }
     }
 
     private void SetCharacterExpressions(DialogueLine line)
@@ -135,6 +165,9 @@ public class DialogueManager : MonoBehaviour
 
             case SpeakerType.Customer:
                 return "CUSTOMER";
+
+            case SpeakerType.Narration:
+                return "NARRATION";
 
             default:
                 return "";

@@ -10,30 +10,57 @@ public class BackgroundManager : MonoBehaviour
 
     public float fadeDuration = 0.5f;
 
-    public void ChangeToFood()
+    private BackgroundType currentBackground = BackgroundType.None;
+
+    public void ChangeToFood(bool shouldFade)
     {
-        StartCoroutine(ChangeBackground(foodBackground));
+        if (currentBackground == BackgroundType.Food)
+            return;
+
+        StartCoroutine(ChangeBackground(
+            foodBackground,
+            BackgroundType.Food,
+            shouldFade
+        ));
     }
 
-    public void ChangeToShop()
+    public void ChangeToShop(bool shouldFade)
     {
-        StartCoroutine(ChangeBackground(shopBackground));
+        if (currentBackground == BackgroundType.Shop)
+            return;
+
+        StartCoroutine(ChangeBackground(
+            shopBackground,
+            BackgroundType.Shop,
+            shouldFade
+        ));
     }
 
-    private IEnumerator ChangeBackground(GameObject newBackground)
+    private IEnumerator ChangeBackground(
+        GameObject newBackground,
+        BackgroundType newBackgroundType,
+        bool shouldFade)
     {
-        // Fade to black
-        yield return StartCoroutine(Fade(1));
+        // Only fade if this dialogue line has Fade Background checked
+        if (shouldFade)
+        {
+            yield return StartCoroutine(Fade(1));
+        }
 
-        // Turn off all backgrounds
+        // Turn off old backgrounds
         shopBackground.SetActive(false);
         foodBackground.SetActive(false);
 
-        // Turn on the new background
+        // Turn on new background
         newBackground.SetActive(true);
 
-        // Fade back in
-        yield return StartCoroutine(Fade(0));
+        currentBackground = newBackgroundType;
+
+        // Only fade back in if we faded to black
+        if (shouldFade)
+        {
+            yield return StartCoroutine(Fade(0));
+        }
     }
 
     private IEnumerator Fade(float targetAlpha)

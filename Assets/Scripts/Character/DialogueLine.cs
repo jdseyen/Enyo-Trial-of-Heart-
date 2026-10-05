@@ -62,6 +62,8 @@ public class CharacterExpressionData
 
 // Stores all information needed for one dialogue line
 [System.Serializable]
+
+
 public class DialogueLine
 {
     // The actual dialogue text
@@ -78,6 +80,10 @@ public class DialogueLine
     // Choose Shop, Food, or None in the Inspector
     public BackgroundType background;
 
+    //Should the screen fade to black when changing to this background?
+    public bool fadeBackground; 
+
     // Expressions for any characters present during this line
     public CharacterExpressionData[] characterExpressions;
+
 }

@@ -56,15 +56,14 @@ public class DialogueManager : MonoBehaviour
         switch (line.background)
         {
             case BackgroundType.Shop:
-                backgroundManager.ChangeToShop();
+                backgroundManager.ChangeToShop(line.fadeBackground);
                 break;
 
             case BackgroundType.Food:
-                backgroundManager.ChangeToFood();
+                backgroundManager.ChangeToFood(line.fadeBackground);
                 break;
 
             case BackgroundType.None:
-                // Do nothing
                 break;
         }
     }

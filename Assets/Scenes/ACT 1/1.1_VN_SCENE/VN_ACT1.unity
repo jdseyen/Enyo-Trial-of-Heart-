@@ -476,7 +476,7 @@ MonoBehaviour:
   shopBackground: {fileID: 2112075735}
   foodBackground: {fileID: 315717462}
   fadeOverlay: {fileID: 557397623}
-  fadeDuration: 1
+  fadeDuration: 0.5
 --- !u!1 &400231668
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,8 +596,8 @@ CanvasGroup:
   m_GameObject: {fileID: 557397621}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &557397624
 MonoBehaviour:
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16226411, g: 0.16226411, b: 0.16226411, a: 0}
+  m_Color: {r: 0.12452829, g: 0.1210039, b: 0.1210039, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -899,9 +899,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 557397622}
   - {fileID: 18635816}
   - {fileID: 1238998526}
-  - {fileID: 557397622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1115,11 +1115,13 @@ MonoBehaviour:
     speaker: 0
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions: []
   - dialogue: Hello there! Would you like to try one of our handmade puzzles?
     speaker: 1
     characterAction: 1
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 1
@@ -1127,6 +1129,7 @@ MonoBehaviour:
     speaker: 3
     characterAction: 1
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 3
       expressionIndex: 0
@@ -1136,6 +1139,7 @@ MonoBehaviour:
     speaker: 1
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 1
@@ -1144,6 +1148,7 @@ MonoBehaviour:
     speaker: 3
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 0
@@ -1152,6 +1157,7 @@ MonoBehaviour:
     speaker: 1
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 1
@@ -1159,6 +1165,7 @@ MonoBehaviour:
     speaker: 2
     characterAction: 1
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 2
@@ -1166,6 +1173,7 @@ MonoBehaviour:
     speaker: 1
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 1
@@ -1173,6 +1181,7 @@ MonoBehaviour:
     speaker: 2
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 2
@@ -1182,6 +1191,7 @@ MonoBehaviour:
     speaker: 0
     characterAction: 0
     background: 1
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 1
@@ -1191,6 +1201,15 @@ MonoBehaviour:
     speaker: 2
     characterAction: 0
     background: 2
+    fadeBackground: 1
+    characterExpressions:
+    - character: 1
+      expressionIndex: 2
+  - dialogue: I love you I love you! Thank you mama~
+    speaker: 1
+    characterAction: 0
+    background: 2
+    fadeBackground: 0
     characterExpressions:
     - character: 1
       expressionIndex: 2

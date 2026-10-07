@@ -1213,6 +1213,47 @@ MonoBehaviour:
     characterExpressions:
     - character: 1
       expressionIndex: 2
+  - dialogue: Yes yes... now eat up! I'll go ahead and stock up the...
+    speaker: 2
+    characterAction: 0
+    background: 1
+    fadeBackground: 1
+    characterExpressions:
+    - character: 1
+      expressionIndex: 2
+  - dialogue: huh? where was the game I carried?
+    speaker: 2
+    characterAction: 0
+    background: 1
+    fadeBackground: 1
+    characterExpressions:
+    - character: 1
+      expressionIndex: 0
+  - dialogue: Oh it's okay mama! i'll go get them for you!
+    speaker: 1
+    characterAction: 0
+    background: 1
+    fadeBackground: 0
+    characterExpressions:
+    - character: 1
+      expressionIndex: 2
+  - dialogue: oh dear how embarassing...thank you dear
+    speaker: 2
+    characterAction: 0
+    background: 1
+    fadeBackground: 0
+    characterExpressions:
+    - character: 1
+      expressionIndex: 2
+  - dialogue: Enyo's mother was embarassed but Enyo didnt want her dear mother to
+      feel incapable
+    speaker: 0
+    characterAction: 0
+    background: 1
+    fadeBackground: 0
+    characterExpressions:
+    - character: 1
+      expressionIndex: 3
 --- !u!1 &993033737
 GameObject:
   m_ObjectHideFlags: 0
